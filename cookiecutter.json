@@ -1,0 +1,19 @@
+{
+    "directory_name": "test_project",
+    "project_name": "{{cookiecutter.directory_name}}",
+    "contact_name": "none",
+    "contact_mail": "none",
+    "year": "2024",
+    "create_git": ["Yes", "No"], 
+    "create_remote_and_push": ["Yes", "No"],
+    "git_visibility": ["public", "private", "internal"],
+    "push_existing_remote": ["No", "Yes"],
+    "git_remote": "none",
+    "license": ["CC-BY 4.0", "MIT", "BSD-3", "Apache Software License 2.0"],
+    "include_ci": ["Yes", "No"], 
+
+    "_copy_without_render": [
+        "*.html",
+        "*.binder"
+    ]
+}
