@@ -27,7 +27,7 @@ if {% if cookiecutter.create_git == "Yes" %}True{% else %}False{% endif %}:
 
 			if is_github_cli_installed():
 
-				if '{{cookiecutter.github_organization}}' != 'none' and '{{cookiecutter.github_organization}}' != 'None' and {{cookiecutter.github_organization}} is not None:
+				if '{{cookiecutter.github_organization}}' != 'none' and '{{cookiecutter.github_organization}}' != 'None':
 					new_repo = '{{cookiecutter.github_organization}}' +'/'+ '{{cookiecutter.directory_name}}'
 				else:
 					new_repo = '{{cookiecutter.directory_name}}'

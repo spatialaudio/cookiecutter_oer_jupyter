@@ -46,7 +46,7 @@ The material covers the following topics
 ## Usage and Contributing
 
 The contents are provided as [Open Educational Resource](https://de.wikipedia.org/wiki/Open_Educational_Resources).
-_TBD: license_
+**!TBD: license!**
 Feel free to use the entire collection, parts, or even single notebooks for your purposes.
 I am curious on the usage of the provided resources, so feel free to drop a
 line or report to [{{cookiecutter.contact_mail}}](mailto:{{cookiecutter.contact_mail}}).
