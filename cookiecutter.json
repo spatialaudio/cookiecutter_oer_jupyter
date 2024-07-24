@@ -6,6 +6,7 @@
     "year": "2024",
     "create_git": ["Yes", "No"], 
     "create_remote_and_push": ["Yes", "No"],
+    "github_organization": "None",
     "git_visibility": ["public", "private", "internal"],
     "push_existing_remote": ["No", "Yes"],
     "git_remote": "none",
