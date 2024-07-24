@@ -27,12 +27,12 @@ if {% if cookiecutter.create_git == "Yes" %}True{% else %}False{% endif %}:
 
 			if is_github_cli_installed():
 
-				if {{cookiecutter.github_organization}} != 'none' and {{cookiecutter.github_organization}} != 'None':
-					new_repo = {{cookiecutter.github_organization}} +'/'+ {{cookiecutter.directory_name}}
+				if '{{cookiecutter.github_organization}}' != 'none' and '{{cookiecutter.github_organization}}' != 'None' and {{cookiecutter.github_organization}} is not None:
+					new_repo = '{{cookiecutter.github_organization}}' +'/'+ '{{cookiecutter.directory_name}}'
 				else:
-					new_repo = {{cookiecutter.directory_name}}
+					new_repo = '{{cookiecutter.directory_name}}'
 
-				subprocess.run(['gh', 'repo', 'create', new_repo, '--'+{{cookiecutter.git_visibility}}, '--source', {{cookiecutter.directory_name}}, '--push'])
+				subprocess.run(['gh', 'repo', 'create', new_repo, '--'+'{{cookiecutter.git_visibility}}', '--source', '.', '--push'])
 				print('Created GitHub remote and pushed local repository')
 
 			else:
@@ -42,12 +42,7 @@ if {% if cookiecutter.create_git == "Yes" %}True{% else %}False{% endif %}:
 				
 			if is_github_cli_installed():
 
-				if {{cookiecutter.github_organization}} != 'none' and {{cookiecutter.github_organization}} != 'None':
-					new_repo = {{cookiecutter.github_organization}} +'/'+ {{cookiecutter.directory_name}}
-				else:
-					new_repo = {{cookiecutter.directory_name}}
-
-				subprocess.run(['git', 'remote', 'add', 'origin', {{cookiecutter.git_remote}}])
+				subprocess.run(['git', 'remote', 'add', 'origin', '{{cookiecutter.git_remote}}'])
 				subprocess.run(['git', 'push'])
 				print('Created GitHub remote and pushed local repository')
 
