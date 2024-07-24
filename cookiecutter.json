@@ -8,7 +8,7 @@
     "create_remote_and_push": ["Yes", "No"],
     "github_organization": "None",
     "git_visibility": ["public", "private", "internal"],
-    "push_existing_remote": ["No", "Yes"],
+    "push_existing_remote": ["Yes", "No"],
     "git_remote": "none",
     "license": ["CC-BY 4.0", "MIT", "BSD-3", "Apache Software License 2.0"],
     "include_ci": ["Yes", "No"], 
