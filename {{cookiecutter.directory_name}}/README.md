@@ -1,8 +1,8 @@
 # {{cookiecutter.project_name}}
 {%- if cookiecutter.include_ci == "Yes" -%}
-[![Linting]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml) 
-[![Run Notebooks]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml) 
-[![Sphinx Built]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml)
+[![Linting]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml) 
+[![Run Notebooks]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml) 
+[![Sphinx Built]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml)
 {% endif %}
 
 This repository collects didactically edited [Jupyter](https://jupyter.org/) notebooks that introduce basic concepts of [{{cookiecutter.project_name}}]({{cookiecutter.git_remote}}). Please take a look at the [static version](http://nbviewer.ipython.org/github/{{cookiecutter.git_remote}}/blob/master/index.ipynb)
@@ -46,7 +46,13 @@ The material covers the following topics
 ## Usage and Contributing
 
 The contents are provided as [Open Educational Resource](https://de.wikipedia.org/wiki/Open_Educational_Resources).
-**!TBD: license!**
+{%- if cookiecutter.license == "Split" -%}
+The text is licensed under {{cookiecutter.license_text}} , and the code of the IPython examples is under the {{cookiecutter.license_code}} license.
+{%- elif cookiecutter.license== "Code" -%}
+They are licensed under {{cookiecutter.license_code}}
+{%- elif cookiecutter.license == "Text" -%}
+They are licensed under {{cookiecutter.license_text}}
+{% endif %}
 Feel free to use the entire collection, parts, or even single notebooks for your purposes.
 I am curious on the usage of the provided resources, so feel free to drop a
 line or report to [{{cookiecutter.contact_mail}}](mailto:{{cookiecutter.contact_mail}}).
@@ -67,9 +73,9 @@ a tracked [pull request]({{cookiecutter.git_remote}}/pulls).
 
 The notebooks' computational examples are automatically built and checked for errors by continuous integration using github actions.
 
-[![Linting]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml) 
-[![Run Notebooks]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml) 
-[![Sphinx Built]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml/badge.svg?branch=master)]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml)
+[![Linting]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/lint_nb.yml) 
+[![Run Notebooks]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/run_nb.yml) 
+[![Sphinx Built]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml/badge.svg?branch=main)]({{cookiecutter.git_remote}}/actions/workflows/notebook_ci.yml)
 
 {% endif %}
 
