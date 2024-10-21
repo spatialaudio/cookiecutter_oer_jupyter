@@ -14,8 +14,8 @@
     "push_existing_remote": ["No", "Yes"], 
     "git_remote": "none",
     "license": ["Split", "Code", "Text"],
-    "license_code": ["CC-BY 4.0", "MIT", "BSD-3", "Apache Software License 2.0"],
-    "license_text": ["CC-BY 4.0", "MIT", "BSD-3", "Apache Software License 2.0"],
+    "license_code": ["MIT", "BSD-3", "Apache Software License 2.0"],
+    "license_text": ["CC-BY 4.0", "CC-BY-SA 4.0"],
     "include_ci": ["No", "Yes"],  
 
     "_copy_without_render": [
