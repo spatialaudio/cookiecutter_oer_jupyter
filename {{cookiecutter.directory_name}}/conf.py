@@ -217,7 +217,8 @@ htmlhelp_basename = '{{cookiecutter.directory_name}}_doc'
 nbsphinx_execute_arguments = ['--InlineBackend.figure_formats={"svg", "pdf"}']
 nbsphinx_execute = 'always'
 nbsphinx_timeout = 300
-nbsphinx_allow_errors = False
+# ignore python errors while running nbsphinx. Set to false if you want a run to stop if errors occur
+nbsphinx_allow_errors = True 
 
 
 latex_elements = {

@@ -54,7 +54,7 @@ else:
 # importing notebook collection
 if {% if cookiecutter.import_notebooks == "Yes" %}True{% else %}False{% endif %}:
 
-	del_files = ['index.ipynb', '.DS_Store']
+	del_files = ['index.ipynb', 'index.rst', 'requirements.txt', '.DS_Store']
 	del_folders = ['introduction','data']
 	nb_col_path = '{{cookiecutter.notebook_collection_path}}'
 	cwd = os.getcwd()
